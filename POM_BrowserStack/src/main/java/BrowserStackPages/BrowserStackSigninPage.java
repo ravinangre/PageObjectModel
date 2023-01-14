@@ -22,6 +22,12 @@ public class BrowserStackSigninPage {
 			
 			@FindBy(xpath ="//input[@id='user_submit']")
 			WebElement LoginBtn;
+			
+			@FindBy(xpath = "(//a[text()='Sign up'])[1]")
+			WebElement SignUP;
+			
+			@FindBy(xpath = "(//a[text()='Forgot password?'])[1]")
+			WebElement ForgotPassword;
 	// Constructor	
 			public BrowserStackSigninPage(WebDriver driver) {
 				this.driver = driver;
@@ -33,6 +39,12 @@ public class BrowserStackSigninPage {
 			}
 			public void enterUserPassword(String userpassword) {
 				UserPassword.sendKeys(userpassword);
+			}
+			public void ClickonSingUP() {
+				SignUP.click();
+			}
+			public void ClickonForgotPass() {
+				ForgotPassword.click();
 			}
 			public void ClickonLogin() {
 				JavascriptExecutor js = (JavascriptExecutor)driver;
