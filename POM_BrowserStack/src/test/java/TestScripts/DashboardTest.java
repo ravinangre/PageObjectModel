@@ -32,6 +32,16 @@ public class DashboardTest {
 	  bsdp.ClickonSummary();
 	  Assert.assertEquals(bsdp.verifyUserName(),"Utkarshaa Academy");
   }
+  @Test(priority = 3)
+  public void ValidateForgotPassword() {
+	  bssip = new BrowserStackSigninPage(driver);
+	  bssip.ClickonForgotPass();
+  }
+  @Test(priority = 4)
+  public void ValidateSignUP() {
+	  bssip = new BrowserStackSigninPage(driver);
+	  bssip.ClickonSingUP();
+  }
   @BeforeTest
   public void setup() {
 	  driver = new ChromeDriver();
