@@ -27,6 +27,12 @@ public class BrowserStackSigninPage {
 			WebElement SignInWithGoogle;
 			
 			
+
+			@FindBy(xpath = "(//a[text()='Sign up'])[1]")
+			WebElement SignUP;
+			
+			@FindBy(xpath = "(//a[text()='Forgot password?'])[1]")
+			WebElement ForgotPassword;
 	// Constructor	
 			public BrowserStackSigninPage(WebDriver driver) {
 				this.driver = driver;
@@ -43,6 +49,13 @@ public class BrowserStackSigninPage {
 				SignInWithGoogle.click();
 			}
 			
+
+			public void ClickonSingUP() {
+				SignUP.click();
+			}
+			public void ClickonForgotPass() {
+				ForgotPassword.click();
+			}
 			public void ClickonLogin() {
 				JavascriptExecutor js = (JavascriptExecutor)driver;
 				js.executeScript("arguments[0].click()",LoginBtn);
